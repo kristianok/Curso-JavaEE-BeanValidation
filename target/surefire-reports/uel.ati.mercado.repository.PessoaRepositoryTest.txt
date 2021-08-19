@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: uel.ati.mercado.repository.PessoaRepositoryTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.988 s <<< FAILURE! - in uel.ati.mercado.repository.PessoaRepositoryTest
+testValidation(uel.ati.mercado.repository.PessoaRepositoryTest)  Time elapsed: 0.224 s  <<< ERROR!
+javax.transaction.RollbackException: ARJUNA016053: Could not commit transaction.
+	at uel.ati.mercado.repository.PessoaRepositoryTest.testValidation(PessoaRepositoryTest.java:48)
+Caused by: org.jboss.arquillian.test.spi.ArquillianProxyException: 
+javax.validation.ConstraintViolationException : Validation failed for classes [uel.ati.mercado.model.Pessoa] during persist time for groups [javax.validation.groups.Default, ]
+List of constraint violations:[
+	ConstraintViolationImpl{interpolatedMessage='não pode ser nulo', propertyPath=nome, rootBeanClass=class uel.ati.mercado.model.Pessoa, messageTemplate='{javax.validation.constraints.NotNull.message}'}
+] [Proxied because : Original exception caused: class java.io.NotSerializableException: uel.ati.mercado.model.Pessoa]
+	at uel.ati.mercado.repository.PessoaRepositoryTest.testValidation(PessoaRepositoryTest.java:48)
+
